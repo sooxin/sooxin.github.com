@@ -40,7 +40,7 @@
 <header class="am-topbar am-topbar-inverse am-topbar-fixed-top">
 	<div class="am-container">
 		<h1 class="am-topbar-brand">
-			<a href="#" class="am-text-ir">Sooxin</a>
+			<a href="#" class="am-text-ir">Amaze UI</a>
 		</h1>
 
 		<!--以下代码不知何用，删除了也无影响-->
@@ -53,8 +53,8 @@
 		<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse-4">
 
 			<ul class="am-nav am-nav-pills am-topbar-nav">
-				<li><a href="index.html">首页</a></li>
-				<li class="am-active"><a href="blog.html">博客</a></li>
+				<li class="am-active"><a href="index.html">首页</a></li>
+				<li><a href="blog.html">博客</a></li>
 				<li><a href="#">项目</a></li>
 
 				<li class="am-dropdown" data-am-dropdown>

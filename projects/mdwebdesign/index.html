@@ -2,7 +2,7 @@
 <html>
 
     <head>
-      <!--Import Google Icon Font,查找一下360的替换方案-->
+      <!--Import Google Icon Font,可考虑用国内的源替换-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css"  media="screen,projection"/>
@@ -10,37 +10,28 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	  <title>Sooxin的个人网站</title>
+	  <!-- 此框架对中文无支持，故自己添加中文字体CSS,中文为雅黑 -->
+	  <style type="text/css"">
+		html {
+			 font-family:roboto "Microsoft YaHei" GillSans, Calibri, Trebuchet, sans-serif;
+		}
+	  </style>
     </head>
 
     <body>
-      <!--Import jQuery before materialize.js-->
+      <!--导入jQery和materialize js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
 	  <!--从这里写代码-->
 
 		<!-- 设置图片背景 -->
-		<!-- 记得压缩一下图片，太大了 -->
+		<!-- 记得压缩一下图片，太大了,不利于加载速度 -->
 		<div style="position:fixed;z-index:-1;width:100%;height:100%;">
     	<img src="./assets/pics/bg.jpg" width="100%" height="100%" />
 		</div>
 
 
 		<br/>
-		<!--
-		<div class="row">
-			<div class="col s1">22222</div>
-			<div class="col s10">
-				<ul class="tabs z-depth-3">
-					<li class="tab col s3"><a class="active" href="index.html">首页</a></li>
-					<li class="tab col s3"><a href="#test2">博客</a></li>
-					<li class="tab col s3"><a href="#test3">项目</a></li>
-					<li class="tab col s3"><a href="about.html" target="_blank">关于</a></li>
-				</ul>
-			</div>
-
-			<div class="col s1">22222</div>
-		</div>
-		-->
 	<header>
 		<!-- 小屏幕所用的汉堡菜单，要进行初始化 -->
 		<script>
@@ -55,35 +46,35 @@
 			<div class="col offset-s1 s10">
 				<!-- Dropdown Structure -->
 				<ul id="dropdown1" class="dropdown-content">
-					<li><a href="about.html">关于我</a></li>
-					<li><a href="#!">关于本站</a></li>
+					<li><a href="#aboutme">关于我</a></li>
+					<li><a href="#aboutsite">关于本站</a></li>
 					<li class="divider"></li>
 					<li><a href="#!">更多信息</a></li>
 				</ul>
 				<ul id="dropdown2" class="dropdown-content">
-					<li><a href="about.html">关于我</a></li>
-					<li><a href="#!">关于本站</a></li>
+					<li><a href="#aboutme">关于我</a></li>
+					<li><a href="#aboutsite">关于本站</a></li>
 					<li class="divider"></li>
 					<li><a href="#!">更多信息</a></li>
 				</ul>
 
 				<nav class="z-depth-3">
 					<div class="nav-wrapper">
-						<a href="#!" class="brand-logo">Sooxin</a>
+						<a href="./index.html" class="brand-logo">Sooxin</a>
 						<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 						<!-- 屏幕变小则消失 -->
 						<ul class="right hide-on-med-and-down">
 							<li><a href="index.html">首页</a></li>
-							<li><a href="projects.html">项目</a></li>
-							<li><a href="blogs.html">博客</a></li>
+							<!-- <li><a href="projects.html">项目</a></li> -->
+							<li><a href="#blog">博客</a></li>
 							<!-- Dropdown Trigger -->
 							<li><a class="dropdown-button" href="#!" data-activates="dropdown1">关于<i				class="material-icons right">arrow_drop_down</i></a></li>
 						</ul>
 						<!-- 小屏幕时的汉堡菜单 -->
 						<ul class="side-nav" id="mobile-demo">
 							<li><a href="index.html">首页</a></li>
-							<li><a href="projects.html">项目</a></li>
-							<li><a href="blogs.html">博客</a></li>
+							<!-- <li><a href="projects.html">项目</a></li> -->
+							<li><a href="#blog">博客</a></li>
 							<!-- Dropdown Trigger -->
 							<li><a class="dropdown-button" href="#!" data-activates="dropdown2">关于<i				class="material-icons right">arrow_drop_down</i></a></li>
 						</ul>
@@ -101,7 +92,7 @@
 
 			<div class="col offset-s2 s8">
 			
-				<!-- 滚动栏 -->
+				<!-- BANNER栏 -->
 				<!-- 滚动栏的初始化 -->
 				<script>
 					$(document).ready(function(){
@@ -149,28 +140,17 @@
 
 
 		</div>
-
-
-
+		
 		<div class="row">
-			
-			
-
 			<div class="col offset-s2 s8">
-			
-				<ul class="tabs">
-					<li class="tab col s3"><a class="active" href="#test1">About Me</a></li>
-					<li class="tab col s3"><a href="#test2">My Skills</a></li>
-					<li class="tab col s3"><a href="#test3">Educaton</a></li>
-					<li class="tab col s3"><a href="#test4">Work Exp</a></li>
+				<ul class="tabs  pink accent-2">
+					<li class="tab col s3"><a class="active white-text" href="#aboutme">About Me</a></li>
 				</ul>
-
-				<!--  -->
-				<!-- 第一个tab标签 -->
-				<div id="test1" class="col s12 white" style="padding:0" >
+	
+				<div id="aboutme" class="col s12" style="padding:0;margin:0;" >
 				
-					<!-- 卡片 -->
-					<div class="card" style="margin-bottom:0">
+		
+					<div class="card hoverable" style="margin:0">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="./assets/pics/aboutme.png">
 						</div>
@@ -216,14 +196,48 @@
 									<i class="material-icons circle red">mode_edit</i>
 									<span class="title">博客</span>
 									<p>
-
-										Second Line
+										http://sooxin.github.io/blog.html
 									</p>
 									<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
 								</li>
 							</ul>
 
 
+						</div>
+					</div>
+				
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			
+			
+
+			<div class="col offset-s2 s8">
+			
+				<ul class="tabs">
+					<li class="tab col s3"><a class="active" href="#test1">Service</a></li>
+					<li class="tab col s3"><a href="#test2">My Skills</a></li>
+					<li class="tab col s3"><a href="#test3">Educaton</a></li>
+					<li class="tab col s3"><a href="#test4">Work Exp</a></li>
+				</ul>
+
+				<!--  -->
+				<!-- 第一个tab标签 -->
+				<div id="test1" class="col s12 white" style="padding:0" >
+				
+					<!-- 卡片 -->
+					<div class="card hoverable" style="margin-bottom:0">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img src="./assets/pics/service.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Service</span>
+							<p>We offer kinds of technology supports in main platforms!</p>
 						</div>
 					</div>
 
@@ -237,8 +251,9 @@
 					$('.tooltipped').tooltip({delay: 50});
 					});
 				</script>
-				<div id="test2" class="col s12 green lighten-3">
-					<h5>The skills I've learned:</h5>
+				<div id="test2" class="col s12 green lighten-3 hoverable">
+					<br/>
+					<h6>The skills I've learned:</h6>
 					<br/>
 					<div class="row tooltipped" data-position="top" data-delay="50" data-tooltip="70%">
 						<div class="col offset-s2 s2"><span>HTML\CSS:</span></div>
@@ -314,9 +329,9 @@
 					<div class="row">
 						<div class="col s6">
 
-							<div class="card">
+							<div class="card hoverable">
 								<div class="card-image waves-effect waves-block waves-light">
-									<img src="./assets/pics/edu.png">
+									<img class="activator" src="./assets/pics/edu.png">
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Education：Undergraduate<i class="material-icons right">more_vert</i>
@@ -337,23 +352,19 @@
 
 
 						<div class="col s6">
-							<div class="card">
-								<div class="card-image waves-effect waves-block waves-light">
-									<img src="./assets/pics/CET.png">
+							<div class="card hoverable">
+								<div class="card-image waves-effect waves-block waves-light activator">
+									<img class="activator" src="./assets/pics/CET.png">
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">CET:4<i class="material-icons right">more_vert</i></span>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">MORE<i class="material-icons right">close</i></span>
-									<div class="chip">
-										<img src="images/yuna.jpg" alt="Contact Person">
-										460
-									</div>
-									<div class="chip">
-										CET4
-									<i class="material-icons">close</i>
-									</div>
+									I've passed CET4<br/>
+									As well I just failed for my firt CET6<br/>
+									But what I wanna say is:<br/>
+									"CET6,I'm on the way"
 								</div>
 							</div>
 						</div>	
@@ -362,7 +373,7 @@
 					
 				</div>
 				<!--  -->
-				<div id="test4" class="col s12 white">Coming soon!Please wait!</div>
+				<div id="test4" class="col s12 white hoverable">Coming soon!Please wait!</div>
 			
 			
 			</div>
@@ -372,24 +383,25 @@
 </main>
 		<div class="row">
 			<div class="col offset-s2 s2">
-				<img class="materialboxed responsive-img" data-caption="Love Life" width="250" src="./assets/pics/show01.png">
+				<img class="materialboxed responsive-img hoverable" data-caption="Love Life" width="250" src="./assets/pics/show01.png">
 				
 			</div>
 			<div class="col s2">
-				<img class="materialboxed responsive-img" data-caption="Love Natrue" width="250" src="./assets/pics/show02.png">
+				<img class="materialboxed responsive-img hoverable" data-caption="Love Natrue" width="250" src="./assets/pics/show02.png">
 				
 			</div>
 			<div class="col s2">
-				<img class="materialboxed responsive-img" data-caption="Love Reading" width="250" src="./assets/pics/show03.png">
+				<img class="materialboxed responsive-img hoverable" data-caption="Love Reading" width="250" src="./assets/pics/show03.png">
 				
 			</div>
 			<div class="col s2">
-				<img class="materialboxed responsive-img" data-caption="Love Coding" width="250" src="./assets/pics/show04.png">
+				<img class="materialboxed responsive-img hoverable" data-caption="Love Coding" width="250" src="./assets/pics/show04.png">
 				
 			</div>
 		</div>
 
-		<div class="row">
+		<!-- 博客区 -->
+		<div class="row" id="blog">
 			<div class="col offset-s2 s8">
 			  <ul class="tabs">
 				<li class="tab col s3"><a href="#blog">MY BLOGS</a></li>
@@ -398,23 +410,25 @@
 			<div id="blog" class="col offset-s2 s8">
 				<ul class="collapsible popout" data-collapsible="accordion">
 					<li>
-						<div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>本站说明</div>
+						<div class="collapsible-header active" id="aboutsite"><i class="mdi-image-filter-drama"></i>BLOG03:本站说明</div>
 						<div class="collapsible-body white" >
 							<p>
+								因为特别喜欢Google Material设计风格，于是就尝试了。<br/>
+								本站采用<a href="http://materializecss.com/about.html" target="_blank">materialize</a> CSS设计,由于时间因素，部分支持响应式布局，但优化还不够。</br>
+								本站部分图片来源于无版权图片网站<a href="https://picjumbo.com/" target="_blank">picjumbo.com</a>。</br>
+								部分图片又自己绘制，编辑工具为PPT和美图秀秀网页版。<br/>
+								托管于<a href="https://github.com/" target="_blank">GitHub</a>。
 								网页还在建设中，还有许多不完善，请谅解！</br>
-								本站采用<a href="http://materializecss.com/about.html">materialize框架</a>设计</br>
-								部分图片来源于无版权图片网站<a href="https://picjumbo.com/">picjumbo.com</a></br>
-								托管于<a href="https://github.com/">GitHub</a>
 							</p>
 						</div>
 					</li>
 					<li>
-						<div class="collapsible-header"><i class="mdi-maps-place"></i>你好，世界！</div>
+						<div class="collapsible-header"><i class="mdi-maps-place"></i>BLOG02:你好，世界！</div>
 						<div class="collapsible-body white"><p>hello world.</p></div>
 					</li>
 					<li>
-						<div class="collapsible-header"><i class="mdi-social-whatshot"></i>这是博客标题</div>
-						<div class="collapsible-body white"><p>这里放正文.</p></div>
+						<div class="collapsible-header"><i class="mdi-social-whatshot"></i>BLOG01:这是博客标题</div>
+						<div class="collapsible-body white"><p>这里放正文,之后可以考虑专为博客建一个页面！</p></div>
 					</li>
 			   </ul>
 			
@@ -520,7 +534,7 @@
 			</div>
 			<div class="footer-copyright">
 				<div class="container">
-					© 2014 Copyright Text
+					© 2016 Copyright
 					<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
 				</div>
 			</div>

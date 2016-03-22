@@ -114,8 +114,8 @@
 						<li>
 							<img src="./assets/pics/navshow02.png"> <!-- 展示图片 -->
 							<div class="caption left-align">
-								<h3>Coding Life!</h3>
-								<h5 class="light grey-text text-lighten-3">Loving life,Loving coding!</h5>
+								<h3 class="indigo-text text-darken-1">Coding Life!</h3>
+								<h5 class="light indigo-text text-darken-1">Loving life,Loving coding!</h5>
 							</div>
 						</li>
 						<li>
@@ -128,8 +128,8 @@
 						<li>
 							<img src="./assets/pics/navshow04.png"> <!-- 展示图片 -->
 							<div class="caption center-align">
-								<h3>Hello World!</h3>
-								<h5 class="light grey-text text-lighten-3">Here's our worderful world!.</h5>
+								<h3 class="teal-text text-darken-4">Hello World!</h3>
+								<h5 class="light teal-text text-darken-4">Here's our worderful world!.</h5>
 							</div>
 						</li>
 					</ul>
@@ -141,13 +141,13 @@
 
 		</div>
 		
-		<div class="row">
+		<div class="row" id="aboutme">
 			<div class="col offset-s2 s8">
 				<ul class="tabs  pink accent-2">
 					<li class="tab col s3"><a class="active white-text" href="#aboutme">About Me</a></li>
 				</ul>
 	
-				<div id="aboutme" class="col s12" style="padding:0;margin:0;" >
+				<div class="col s12" style="padding:0;margin:0;" >
 				
 		
 					<div class="card hoverable" style="margin:0">
@@ -251,7 +251,7 @@
 					$('.tooltipped').tooltip({delay: 50});
 					});
 				</script>
-				<div id="test2" class="col s12 green lighten-3 hoverable">
+				<div id="test2" class="col s12  teal lighten-5 hoverable">
 					<br/>
 					<h6>The skills I've learned:</h6>
 					<br/>
@@ -373,9 +373,18 @@
 					
 				</div>
 				<!--  -->
-				<div id="test4" class="col s12 white hoverable">Coming soon!Please wait!</div>
-			
-			
+				<div id="test4" class="col s12 white hoverable" style="padding:0;">
+					<!-- 卡片 -->
+					<div class="card hoverable" style="margin-bottom:0;">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img src="./assets/pics/workexp.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">WorkExp</span>
+							<p>I'am glad to work for creative and outstanding company!</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		
 		
@@ -413,22 +422,53 @@
 						<div class="collapsible-header active" id="aboutsite"><i class="mdi-image-filter-drama"></i>BLOG03:本站说明</div>
 						<div class="collapsible-body white" >
 							<p>
-								因为特别喜欢Google Material设计风格，于是就尝试了。<br/>
+								因为特别喜欢Google Material Design设计风格，于是就尝试了。<br/>
 								本站采用<a href="http://materializecss.com/about.html" target="_blank">materialize</a> CSS设计,由于时间因素，部分支持响应式布局，但优化还不够。</br>
 								本站部分图片来源于无版权图片网站<a href="https://picjumbo.com/" target="_blank">picjumbo.com</a>。</br>
-								部分图片又自己绘制，编辑工具为PPT和美图秀秀网页版。<br/>
+								个别图片由自己绘制，编辑工具为PPT和美图秀秀网页版。<br/>
 								托管于<a href="https://github.com/" target="_blank">GitHub</a>。
 								网页还在建设中，还有许多不完善，请谅解！</br>
+								最后，送给大家一段我最喜欢的话：<br/>
+								<div class="row" >
+									<div class="col offset-s1">
+									<blockquote>
+										这是一个最好的时代，这是一个最坏的时代；<br/>
+										这是一个智慧的年代，这是一个愚蠢的年代； <br/>
+										这是一个光明的季节，这是一个黑暗的季节； <br/>
+										这是希望之春，这是失望之冬； <br/>
+										人们面前应有尽有，人们面前一无所有；<br/> 
+										人们正踏上天堂之路，人们正走向地狱之门。<br/>
+										<p style="aligin:right;">—— 狄更斯《双城记》</p>
+										</blockquote>
+										
+									</div>
+								</div>
 							</p>
 						</div>
 					</li>
 					<li>
 						<div class="collapsible-header"><i class="mdi-maps-place"></i>BLOG02:你好，世界！</div>
-						<div class="collapsible-body white"><p>hello world.</p></div>
+						<div class="collapsible-body white">
+							<p>
+								hello world!<br/>
+								相信多数人在学习第一门计算机语言的，都是从这行代码开始的吧！<br/>
+								我现在还记得第一次在屏幕上输出这句话的喜悦呢！<br/>
+								加油吧，你的人生，在路上。<br/>
+								世界，还等着你去say hello!
+							</p>
+						</div>
 					</li>
 					<li>
 						<div class="collapsible-header"><i class="mdi-social-whatshot"></i>BLOG01:这是博客标题</div>
-						<div class="collapsible-body white"><p>这里放正文,之后可以考虑专为博客建一个页面！</p></div>
+						<div class="collapsible-body white">
+							<p>
+								这是一篇测试用的段落。这是一篇测试用的段落。<br/>
+								这是一篇测试用的段落。这是一篇测试用的段落。<br/>
+								这是一篇测试用的段落。这是一篇测试用的段落。<br/>
+								这是一篇测试用的段落。这是一篇测试用的段落。<br/>
+								这里放正文,之后可以考虑专为博客建一个页面！
+							</p>
+						</div>
 					</li>
 			   </ul>
 			
@@ -448,10 +488,26 @@
 				<i class="large material-icons">add</i>
 			</a>
 			<ul>
-				<li><a class="btn-floating green" href="#"><i class="material-icons">publish</i></a></li>
-				<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-				<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-				<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				<li>
+					<a class="btn-floating green btn tooltipped" href="#" data-position="left" data-delay="50" data-tooltip="返回顶部">
+						<i class="material-icons">publish</i>
+					</a>
+				</li>
+				<li>
+					<a class="btn-floating red btn tooltipped btn tooltipped"  data-position="left" data-delay="50" data-tooltip="关于我" href="#aboutme">
+						<i class="material-icons">perm_identity</i>
+					</a>
+				</li>
+				<li>
+					<a class="btn-floating yellow darken-1 btn tooltipped"  data-position="left" data-delay="50" data-tooltip="给我留言" href="#emailme">
+						<i class="material-icons">format_quote</i>
+					</a>
+				</li>
+				<li>
+					<a class="btn-floating blue btn tooltipped"  data-position="left" data-delay="50" data-tooltip="我的博客" href="#blog">
+						<i class="material-icons">mode_edit</i>
+					</a>
+				</li>
 			</ul>
 		</div>
 
@@ -462,7 +518,7 @@
 		<!-- footer -->
 		<footer class="page-footer">
 			<div class="container">
-				<div class="row">
+				<div class="row" id="emailme">
 					<div class="col l6 s12">
 						<h5 class="white-text">Email to me</h5>
 						<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
@@ -519,16 +575,17 @@
 					<div class="col l4 offset-l2 s12">
 						<h5 class="white-text">连接</h5>
 						<ul>
-							<li><a class="grey-text text-lighten-3" href="#!">项目</a></li>
-							<li><a class="grey-text text-lighten-3" href="#!">博客</a></li>
-							<li><a class="grey-text text-lighten-3" href="#!">关于</a></li>
-							<li>
-								<ul>
-									<li><a class="grey-text text-lighten-4" href="#!">关于我</a></li>
-									<li><a class="grey-text text-lighten-4" href="#!">关于本站</a></li>
-								</ul>
-							</li>
+							<li><a class="grey-text text-lighten-3" href="https://github.com/sooxin">项目</a></li>
+							<li><a class="grey-text text-lighten-3" href="#blog">博客</a></li>
+								
+							<li><a class="grey-text text-lighten-4" href="#aboume">关于我</a></li>
+							<li><a class="grey-text text-lighten-4" href="#aboutsite">关于本站</a></li>
+							
 						</ul>
+
+						<img class="materialboxed" data-caption="follow me on sina microblog" width="250" src="./assets/pics/QR_sina.png">
+						<p style="color:white;">follow me on sina microblog</p>
+
 					</div>
 				</div>
 			</div>

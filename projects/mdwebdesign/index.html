@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
     <head>
-      <!--Import Google Icon Font,可考虑用国内的源替换-->
+      <!--引入 Google Icon Font,可考虑用国内的源替换-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css"  media="screen,projection"/>
@@ -17,13 +17,27 @@
 		html {
 			 font-family:roboto "Microsoft YaHei" GillSans, Calibri, Trebuchet, sans-serif;
 		}
+
+		.shareicon:hover{
+		background-color:#ee6e73;
+		color:white;
+		}
 	  </style>
+
+
     </head>
 
+
     <body>
+
       <!--导入jQery和materialize js-->
+	  <!--
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+      -->
+	  <script type="text/javascript" src="./materialize/jquery/jquery-2.1.1.min.js"></script>
+	  <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+
+
 	  <!--从这里写代码-->
 
 		<!-- 设置图片背景 -->
@@ -158,7 +172,41 @@
 						</div>
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Sooxin<i class="material-icons right">more_vert</i></span>
-							<p>点击图片获得更多信息</p>
+							<p>点击图片获得更多信息<br/></p>
+							<p>分享到：</p>
+							
+							<div class="chip shareicon">
+								<img src="./assets/pics/qqshare.png" alt="Contact Person">
+									QQ
+							</div>
+							<div class="chip shareicon">
+								<img src="./assets/pics/baidushare.png" alt="Contact Person">
+									Baidu
+							</div>
+							<div class="chip shareicon">
+								<img src="./assets/pics/sinashare.png" alt="Contact Person">
+									sina
+							</div>
+							<div class="chip shareicon">
+								<img src="./assets/pics/wechatshare.png" alt="Contact Person">
+									wechat
+							</div>
+							<div class="chip shareicon">
+								<img src="./assets/pics/googleplusshare.png" alt="Contact Person">
+									google+
+							</div>
+							<div class="chip shareicon">
+								<img src="./assets/pics/githubshare.png" alt="Contact Person">
+									GitHub
+							</div>
+							<div class="chip shareicon">
+								<img src="./assets/pics/facebookshare.png" alt="Contact Person">
+									facebook
+							</div>
+							<div class="chip shareicon">
+								<img src="./assets/pics/twittershare.png" alt="Contact Person">
+									twitter
+							</div>
 						</div>
 						<div class="card-reveal">
 							<span class="card-title grey-text text-darken-4">More About Me<i class="material-icons right">close</i></span>
@@ -197,7 +245,7 @@
 								<li class="collection-item avatar">
 									<i class="material-icons circle red">mode_edit</i>
 									<span class="title">博客</span>
-									<p>
+									<p><br/>
 										http://sooxin.github.io/blog.html
 									</p>
 									<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
@@ -362,10 +410,10 @@
 									<span class="card-title activator grey-text text-darken-4">CET:4<i class="material-icons right">more_vert</i></span>
 								</div>
 								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">MORE<i class="material-icons right">close</i></span>
-									I've passed CET4<br/>
-									As well I just failed for my firt CET6<br/>
-									But what I wanna say is:<br/>
+									<span class="card-title grey-text text-darken-4">MORE<i class="material-icons right">close</i></span></br>
+									I've passed CET4<br/></br>
+									As well I just failed for my firt CET6<br/><br/>
+									But what I wanna say is:<br/></br>
 									"CET6,I'm on the way"
 								</div>
 							</div>
@@ -414,8 +462,8 @@
 		<!-- 博客区 -->
 		<div class="row" id="blog">
 			<div class="col offset-s2 s8">
-			  <ul class="tabs">
-				<li class="tab col s3"><a href="#blog">MY BLOGS</a></li>
+			  <ul class="tabs  blue darken-4">
+				<li class="tab col s3 "><a href="#blog" class="white-text">MY BLOGS</a></li>
 			  </ul>
 			</div>
 			<div id="blog" class="col offset-s2 s8">
@@ -426,7 +474,7 @@
 							<p>
 								因为特别喜欢Google Material Design设计风格，于是就尝试了。<br/>
 								本站采用<a href="http://materializecss.com/about.html" target="_blank">materialize</a> CSS设计,由于时间因素，部分支持响应式布局，但优化还不够。</br>
-								本站部分图片来源于无版权图片网站<a href="https://picjumbo.com/" target="_blank">picjumbo.com</a>。</br>
+								本站部分图片和图标来源于无版权图片网站<a href="https://picjumbo.com/" target="_blank">picjumbo.com</a>和<a href="http://www.easyicon.net/">easyicon</a>。</br>
 								个别图片由自己绘制，编辑工具为PPT和美图秀秀网页版。<br/>
 								托管于<a href="https://github.com/" target="_blank">GitHub</a>。
 								网页还在建设中，还有许多不完善，请谅解！</br>
@@ -477,6 +525,8 @@
 			
 			</div>
   </div>
+
+
 
 
 
@@ -598,7 +648,9 @@
 				</div>
 			</div>
         </footer>
-
-
+		
     </body>
+
+
+
 </html>

@@ -121,13 +121,13 @@
 				</div>
 			</div>
 			<div class="item">
-				<img src="./assets/pics/nav/navpic002.png" alt="pics">
+				<img src="./assets/pics/nav/navpic0022.png" alt="pics">
 				<div class="carousel-caption">
 					<h1>aaaaa</h1>
 				</div>
 			</div>
 			<div class="item">
-				<img src="./assets/pics/nav/navpic0011.png" alt="pics">
+				<img src="./assets/pics/nav/navpic0033.png" alt="pics">
 				<div class="carousel-caption">
 					<h1>aaaaa</h1>
 				</div>
@@ -176,16 +176,23 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-4">
 				<h4><strong>关于：</strong></h4>
+					
+				
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<h4><strong>联系我们：</strong></h4>
+					<p><i class="fa fa-phone"></i>联系电话</p>
 					<p><i class="fa fa-weixin"></i>微信</p>
 					<p><i class="fa fa-qq"></i>QQ</p>
 					<p><i class="fa fa-weibo"></i>新浪微博</p>
 					<p><i class="fa fa-google-plus"></i>google+</p>
-					<p><i class="fa fa-fa-twitter"></i>twitter</p>
-					<p><i class="fa fa-facebook-square"></i>facebook</p>
+					<p><i class="fa fa-twitter"></i>推特</p>
+					<p><i class="fa fa-facebook"></i>脸书</p>
 				
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">服务</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">链接</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<h4><strong>链接：</strong></h4>
+				</div>
 			
 			</div>
 			<div class="row">

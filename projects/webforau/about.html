@@ -29,10 +29,10 @@
 			padding-top: 50px;
 			font-family:roboto "Microsoft YaHei" GillSans, Calibri, Trebuchet, sans-serif;	
 		}
-		.servicepic{
-			margin:0px;
-			padding:1px;
-			border:0px;
+		#aboutjumbotron{
+			background-image:url(./assets/pics/parallax2.jpg);
+			background-repeat:no-repeat;
+			height:500px;
 		}
 		#myfooter{
 			background-color:rgb(242,242,242);
@@ -70,18 +70,11 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="./about.html">关于澳新</a></li>
-							<li><a href="#">关于本站</a></li>
+							<li><a href="./about.html">关于本站</a></li>
 						</ul>
 					</li>
 				</ul>
-<!--
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
--->
+
 				<!-- language choose -->
 				<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
@@ -99,115 +92,26 @@
 	</nav>
 
 
-	<!-- pics slider-->
-	<div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		</ol>
-		
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox" >
-			<div class="item active">
-				<img src="./assets/pics/nav/navpic0011.png" alt="pics">
-				<div class="carousel-caption">
-					<h1>hahahha</h1>
-				</div>
-			</div>
-			<div class="item">
-				<img src="./assets/pics/nav/navpic0022.png" alt="pics">
-				<div class="carousel-caption">
-					<h1>aaaaa</h1>
-				</div>
-			</div>
-			<div class="item">
-				<img src="./assets/pics/nav/navpic0033.png" alt="pics">
-				<div class="carousel-caption">
-					<h1>aaaaa</h1>
-				</div>
-			</div>
-		</div>
-		<!-- Controls -->
-		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div><!-- /.slide .carousel -->
 
-
-	<!-- pics slider for mobile-->
-	<div id="carousel-mobile-generic" class="carousel slide visible-xs-block" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel-mobile-generic" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel-mobile-generic" data-slide-to="1"></li>
-			<li data-target="#carousel-mobile-generic" data-slide-to="2"></li>
-		</ol>
-		
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox" >
-			<div class="item active">
-				<img src="./assets/pics/nav/navpic00444.png" alt="pics">
-				<div class="carousel-caption">
-					<h1>hahahha</h1>
-				</div>
-			</div>
-			<div class="item">
-				<img src="./assets/pics/nav/navpic00444.png" alt="pics">
-				<div class="carousel-caption">
-					<h1>aaaaa</h1>
-				</div>
-			</div>
-			<div class="item">
-				<img src="./assets/pics/nav/navpic00444.png" alt="pics">
-				<div class="carousel-caption">
-					<h1>aaaaa</h1>
-				</div>
-			</div>
-		</div>
-		<!-- Controls -->
-		<a class="left carousel-control" href="#carousel-mobile-generic" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#carousel-mobile-generic" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div><!-- /.slide .carousel -->
-
-
-
-	<!-- services -->
-	<div class="container-fluid">
-		<div class="row"> 
-			<div class="col-xs-12 col-sm-6 col-md-3 servicepic">
-				<a href="#" class="thumbnail servicepic">
-					<img src="./assets/pics/service/servicepic0011.png" alt="hh">
-				</a>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3 servicepic">
-				<a href="#" class="thumbnail servicepic">
-					<img src="./assets/pics/service/servicepic0022.png" alt="hh">
-				</a>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3 servicepic">
-				<a href="#" class="thumbnail servicepic">
-					<img src="./assets/pics/service/servicepic0044.png" alt="hh">
-				</a>
-			</div><div class="col-xs-12 col-sm-6 col-md-3 servicepic">
-				<a href="#" class="thumbnail servicepic">
-					<img src="./assets/pics/service/servicepic0055.png" alt="hh">
-				</a>
-			</div>
+	<div class="jumbotron" id="aboutjumbotron">
+		<div class="container">
+			<h1>关于Golden Age</h1><br/>
+			<p>Golden Age 是一家帮助中国大陆学生求学澳大利亚的留学机构，</p>
+			<p>Golden Age 有多年的相关运营经验，信誉坚实可靠，</p>
+			<p>我们相信，只有你想不到的，没有我们做不到的！</p>
+			<br/>
+			<p><a class="btn btn-primary btn-lg" href="#" role="button">了解更多</a></p>
 		</div>
 	</div>
+
+	<div class="container">
+		<h1>Golden Age</h1>
+		<p>这是填充文字这是填充文字这是填充文字这是填充文字这是填充文字</p>
+		<p>这是填充文字这是填充文字这是填充文字这是填充文字</p>
+		<p>这是填充文字这是填充文字这是填充文字这是填充文字这是填充文字这是填充文字这是填充文字这是填充文字这是填充文字</p>
+		<br/><br/><br/><br/>
+	</div>
+
 
 	<!-- footer -->
 	<div class="row bg-warning" id="myfooter">

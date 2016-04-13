@@ -10,7 +10,6 @@
     <!-- Bootstrap -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<!-- font-awesome -->
-	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	
 	<!--[if IE 7]>
@@ -28,6 +27,9 @@
 		body { 
 			padding-top: 50px;
 			font-family:roboto "Microsoft YaHei" GillSans, Calibri, Trebuchet, sans-serif;	
+		}
+		.fullscr{
+			width:100%;
 		}
 
 		#myfooter{
@@ -69,6 +71,9 @@
   </head>
   <body>
 	
+	<!-- for return to top-->
+	<div id="top"></div>
+
 	<!-- navigation bar -->
 	<nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
 		<div class="container">
@@ -87,6 +92,19 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="./index.html">首页<span class="sr-only">(current)</span></a></li>
+					<li><a href="./services.html">澳洲留学</a></li>
+					<li><a href="./about.html">升学转学</a></li>
+					<li><a href="./about.html">签证服务</a></li>
+					<li><a href="./about.html">澳洲购房</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">移民服务<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="./about.html">独立技术移民</a></li>
+							<li><a href="./about.html">商业移民</a></li>
+							<li><a href="./about.html">配偶/亲属移民</a></li>
+						</ul>
+					</li>
+					<!--
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">优质服务<span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -97,13 +115,16 @@
 							<li><a href="./about.html">澳洲购房置业</a></li>
 						</ul>
 					</li>
+					-->
 					<li><a href="./about.html">关于鑫澳</a></li>
+					<!--
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其他<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="./about.html">关于本站</a></li>
 						</ul>
 					</li>
+					-->
 				</ul>
 <!--
       <form class="navbar-form navbar-left" role="search">
@@ -129,9 +150,8 @@
 		</div><!-- /.container -->
 	</nav>
 
-	<!-- for return to top-->
-	<div id="top"></div>
-	<!-- pics slider-->
+
+	<!-- pics slider -->
 	<div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -143,19 +163,19 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox" >
 			<div class="item active">
-				<img src="./assets/pics/nav/navpic0011.png" alt="pics">
+				<img class="fullscr" src="./assets/pics/nav/navpic0011.png" alt="pics">
 				<div class="carousel-caption">
 					<h1>专业专注</h1>
 				</div>
 			</div>
 			<div class="item">
-				<img src="./assets/pics/nav/navpic0022.png" alt="pics">
+				<img class="fullscr" src="./assets/pics/nav/navpic0022.png" alt="pics">
 				<div class="carousel-caption">
 					<h1>信誉保障</h1>
 				</div>
 			</div>
 			<div class="item">
-				<img src="./assets/pics/nav/navpic0033.png" alt="pics">
+				<img class="fullscr" src="./assets/pics/nav/navpic0033.png" alt="pics">
 				<div class="carousel-caption">
 					<h1>服务周到</h1>
 				</div>
@@ -311,7 +331,7 @@
 			<div class="row" id="newsandcomrow">
 				<!-- comments -->
 				<div class="col-xs-12 col-sm-7 col-md-8" id="comment">
-					
+					<div><h3>客户评价：</h3></div>
 					<!-- pics slider for mobile-->
 					<div id="carousel-comment" class="carousel slide" data-ride="carousel">
 						<!-- Indicators -->
@@ -355,11 +375,10 @@
 						<h3>新闻<small>--news</small></h3>
 						<br/>
 					</p>	
-					<p><a href="#!">2016.04.05：ddsadasdd</a></p>
-					<p><a href="#!">2016.03.25：dfddsfdd</a></p>
-					<p><a href="#!">2016.02.19：dddfasdsa</a></p>
-					<p><a href="#!">2016.01.01：鑫澳祝所有客户新年快乐，猴年大吉</a></p>
-					<p><a href="#!">更多……</a></p>
+					<p><a href="./blog.html">2016.04.05：ddsadasdd</a></p>
+					<p><a href="./blog.html">2016.03.25：dfddsfdd</a></p>
+					<p><a href="./blog.html">2016.01.01：鑫澳祝所有客户新年快乐，猴年大吉</a></p>
+					<p><a href="./blog.html">更多……</a></p>
 				</div>
 			
 			</div><!-- /.row -->
@@ -423,7 +442,7 @@
 			</div>
 			<div clss="row">
 				<small>Copyright © 2016 GOLDENAGE INTERNATIONAL GROUP 保留所有权利</small>
-				<small id="returntop"><a href="#top">返回顶部</a><small>
+				<small id="returntop"><a href="#top">返回顶部</a></small>
 			</div>
 			
 			

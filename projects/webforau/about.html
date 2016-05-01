@@ -43,6 +43,12 @@
 		hr{
 			border-color:rgb(214,214,214) ;
 		}
+
+		#returntop{
+			display:block;
+			text-align:right;
+		}
+		//div{border:1px solid black;}
 		
 		
 		
@@ -50,8 +56,11 @@
 	</style>
   </head>
   <body>
+	<!-- for return to top-->
+	<div id="top"></div>
+
 	<!-- navigation bar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -61,25 +70,28 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html"><strong>Golden Age</strong></a>
+				<a class="navbar-brand" href="index.html"><strong>鑫澳</strong></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="./index.html">首页<span class="sr-only">(current)</span></a></li>
-					<li><a href="./about.html">澳洲留学</a></li>
-					<li><a href="./about.html">升学转学</a></li>
-					<li><a href="./about.html">签证服务</a></li>
-					<li><a href="./about.html">移民服务</a></li>
-					<li><a href="./about.html">澳洲购房置业</a></li>
+					<li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+					<li><a href="./service/study.html">澳洲留学</a></li>
+					<li><a href="./service/transfer.html">升学转学</a></li>
+					<li><a href="./service/visa.html">签证服务</a></li>
+					<li><a href="../about.html">澳洲购房</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于<span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">移民服务<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="./about.html">关于澳新</a></li>
-							<li><a href="./about.html">关于本站</a></li>
+							<li><a href="./service/immigration.html#commercial">商业移民</a></li>
+							<li><a href="./service/immigration.html#tek">独立技术移民</a></li>
+							<li><a href="./service/immigration.html#relative">配偶&亲属移民</a></li>
 						</ul>
 					</li>
+			
+					<li class="active"><a href="about.html">关于鑫澳</a></li>
+					
 				</ul>
 
 				<!-- language choose -->
@@ -138,9 +150,14 @@
 		<div class="container">
 			<div class="row">
 				
-				<div class="col-sm-6 col-md-4">
+				<div class="col-sm-6 col-md-3">
 						<h4><strong>关于：</strong></h4>
-						<p>dadaasdas dasd da da ddasd ad a</p>
+						<p>
+							我们致力于为中澳文化交流及深度合作贡献自己的一份力量，<br/>
+							立志成为中澳交流的友好桥梁!
+						</p>
+
+
 
 				</div>
 				<div class="col-sm-6 col-md-6">
@@ -166,12 +183,15 @@
 						</div>
 									
 				</div>
-				<div class="col-sm-8 col-md-2">
+				<div class="col-sm-8 col-md-3">
 					<div class="row">
 						<div class="col-sm-12 col-md-12"><h4><strong>链接：</strong></h4></div>
-						<div class="col-sm-4 col-md-12"><p><a href="#!">留学</a></p></div>
-						<div class="col-sm-4 col-md-12"><p><a href="#!">移民</a></p></div>
-						<div class="col-sm-4 col-md-12"><p><a href="#!">关于</a></p></div>
+						<div class="col-xs-6 col-sm-4 col-md-6"><p><a href="#!">澳洲留学</a></p></div>
+						<div class="col-xs-6 col-sm-4 col-md-6"><p><a href="#!">升学转学</a></p></div>
+						<div class="col-xs-6 col-sm-4 col-md-6"><p><a href="#!">签证服务</a></p></div>
+						<div class="col-xs-6 col-sm-4 col-md-6"><p><a href="#!">澳洲购房</a></p></div>
+						<div class="col-xs-6 col-sm-4 col-md-6"><p><a href="#!">移民服务</a></p></div>
+						<div class="col-xs-6 col-sm-4 col-md-6"><p><a href="#!">关于鑫澳</a></p></div>
 					
 					</div>
 					
@@ -182,13 +202,14 @@
 			</div>
 			<div clss="row">
 				<small>Copyright © 2016 GOLDENAGE INTERNATIONAL GROUP 保留所有权利</small>
+				<small id="returntop"><a href="#top">返回顶部</a></small>
 			</div>
 			
 			
 		</div>
 	
 	
-	</div>
+	</div><!-- /footer -->
 
 
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Golden Age-澳洲留学</title>
+    <title>鑫澳-留学&移民</title>
 
     <!-- Bootstrap -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@
 		nav{opacity:0.8;}
 		-->
 		#aboutjumbotron{
-			background-image:url(../assets/pics/service/study/study.png);
+			background-image:url(../assets/pics/service.jpg);
 			background-repeat:no-repeat;
 			height:500px;
 			background-size:cover;
@@ -56,15 +56,10 @@
 		.serviceshow{
 			margin:20px auto;
 		}
-		
-		.college{
+		.serviceshow div div{
 			text-align:center;
 		}
-
-		.smallcenter{
-			text-align:center;
-		}
-		.serviceshow h2{
+		.serviceshow h1{
 			text-align:center;
 		}
 		#returntop{
@@ -73,7 +68,7 @@
 		}
 
 		
-		//small,div,img,h1{border:black 1px solid; }
+		//div,img,h1{border:black 1px solid; }
 		
 		
 		
@@ -102,20 +97,20 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="../index.html">首页<span class="sr-only">(current)</span></a></li>
-					<li class="active"><a href="study.html">澳洲留学</a></li>
+					<li><a href="study.html">澳洲留学</a></li>
 					<li><a href="transfer.html">升学转学</a></li>
-					<li><a href="visa.html">签证服务</a></li>
-					<li><a href="../about.html">澳洲购房</a></li>
+					<li  class="active"><a href="visa.html">签证服务</a></li>
+					<li><a href="./about.html">澳洲购房</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">移民服务<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="immigration.html#commercial">商业移民</a></li>
+							<li><a href="immigration.html">商业移民</a></li>
 							<li><a href="immigration.html#tek">独立技术移民</a></li>
 							<li><a href="immigration.html#relative">配偶&亲属移民</a></li>
 						</ul>
 					</li>
 			
-					<li><a href="../about.html">关于鑫澳</a></li>
+					<li><a href="./about.html">关于鑫澳</a></li>
 					
 				</ul>
 
@@ -139,7 +134,7 @@
 
 	<div class="jumbotron" id="aboutjumbotron">
 		<div class="container">
-			<h1>澳洲留学</h1><br/>
+			<h1>签证服务</h1><br/>
 			<p>我们致力于为中澳文化交流及深度合作贡献自己的一份力量，</p>
 			<p>立志成为中澳交流的友好桥梁!</p>
 			<br/>
@@ -153,102 +148,14 @@
 
 	<div class="container">
 		<div class="row serviceshow">
-			<div class="col-xs-12 col-sm-12 col-md-12">
-				<h2>澳洲简介</h2>
-				<p>
-					在众多留学国家当中，可爱的袋鼠之国---澳洲，以高品质的教育、合理的费用、及良好的人文环境，广受家长和学生的喜爱，成为众多学子的选择。澳洲提供多元及开明的教育环境，并严格把关的教育品质，使得学生得以充分学习，取得文凭，并受全世界认可，提升自己未来的竞争力。想要享受高质素教育及生活，去澳洲就最合适不过了。相对起到英、美的住宿及学费开支，到澳洲升学实在物有所值。
-				</p>
-				<hr/>
+
 			
-			</div>
 			
-			<div class="col-xs-12 col-sm-6 col-md-6">
-				<h2>留学澳洲的理由</h2>
-				<p>
-					澳洲世界级的杰出教育系统· 充足的教育资源，舒适的生活环境，移民大国，相对环境整治安全。· 最经济最实惠的国家· 相近的气候类型· 地理位置较近· 一个拥有多元文化的国家· 自然与人文的环境· 持学生签证可打工· 健全的海外学生医疗保险制度· 取得学位后移民。时差相差不大，与亲人朋友距离相对较近。
-				</p>
-			
-			</div>
-			
-			<div class="col-xs-12 col-sm-6 col-md-6">
-				<h2>澳洲大学联盟介绍</h2>
-				<p>
-					顶尖的学术地位  世界级的排名澳洲的教育品质由联邦政府控管，目前澳洲共有 43 所大学，其中有 40 所本地大学、两所国际大学和一所私立专业大学。除大学外，亦有不少其他院校提供高等教育课程。所有大学皆有其独特之专业及学术背景，因此在澳洲并无排名先后之顺序。但依照其学术声望及专业、地区特性，各大学分别组成不同的大学联盟。
-				</p>
-			
-			</div>
-
-			<div class="row container-fluid">
-				<div class="col-xs-12 col-sm-12 col-md-12">
-					<h2>澳洲八大名校（G8）</h2>
-					<p class="smallcenter">
-						均为世界百大名校/学术研究型大学/入学门槛较高
-					</p>
-					<hr/>
-				</div>
-
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="college">
-						<img src="../assets/pics/service/study/college-aun.jpg" class="img-circle" alt="澳洲国立大学 ANU"/>
-					</div>
-					<h2>澳洲国立大学 ANU</h2>
-					<p class="smallcenter">Australia National University</p>
-					<p>
-						澳洲国立大学（Australian National University，ANU）创立于1946年, 位于澳洲首都坎培拉, 除了是澳洲唯一一所由联邦会立法设立的过立大学, 是南半球首屈一指的顶尖研究型大学。 ANU不但是澳洲八大名校的一员 (The Group of Eight), 2015年更被QS (Quacquarelli Symonds World University Rankings 全球大学排行榜) 名列全澳洲第一, 全世界第19名的顶尖大学, 更是唯一成为国际研究大学联盟成员之一的澳洲大学。
-					</p>
-				</div>
-
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="college">
-						<img src="../assets/pics/service/study/college-us.jpg" class="img-circle" alt="悉尼大学"/>
-					</div>
-					<h2>悉尼大学</h2>
-					<p class="smallcenter">University of Sydney</p>
-					<p>
-						悉尼大学创校于1850年, 是澳洲和整个大洋洲第一个大学。 2015年QS世界大学不仅把它排在世界第45名, 泰晤士高等教育世界大学排名 也把它排在全球第56 。身为全球顶尖的研究型大学, 悉尼大学也是全澳前三名的公立大学, 更是澳洲八大名校的一员 (The Group of Eight)。目前悉尼大学有超过52000名学生, 其中有一万名来自145个不同国家的国际学生。学校教职员超过3400人,有43个运动社团和超过200个学生社团。	
-					</p>
-				</div>
-
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="college">
-						<img src="../assets/pics/service/study/college-uq.jpg" class="img-circle" alt="昆士兰大学 UQ"/>
-					</div>
-					<h2>昆士兰大学 UQ</h2>
-					<p class="smallcenter"> University of Queensland</p>
-					<p>
-						昆士兰大学（昆大）是澳洲一所领先的教学和研究型学府，拥有极高学术成就的教师、世界顶级的设施和优美的校园环境，享誉国际。学生人数超过 5万名，包括来自超过 140 个国家的 11000 名国际学生。师资方面,昆士兰大学拥有一支超过 2800 人的高水准教师队伍， 他们全心全意投身于教学和科学研究事业，许多人都是其各自领域的国际知名学者。昆士兰大学教师获得的全国性教学奖项领先于澳洲其他大学，所获得的教学委员会学生教学杰出贡献奖次数全澳第一。
-					</p>
-				</div>
-
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="college">
-						<img src="../assets/pics/service/study/college-other-zh.jpg" class="img-circle" alt="其他"/>
-					</div>
-					<h2>其他</h2>
-					<p class="smallcenter">Others</p>
-					<p id="othercollege">
-						墨尔本大学<br/>
-						新南威尔士大学<br/>
-						莫纳什大学<br/>
-						西澳大学<br/>
-						阿德莱德大学<br/>
-					</p>
-				</div>
-
-
-			</div>
-					
-				
-				
-			</div>
-			
-		</div>	
-
 
 		</div>	
 	
 	
-	</div>
+	</div><!-- /container -->
 
 
 

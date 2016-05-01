@@ -61,10 +61,6 @@
 			text-align:center;
 		}
 
-		#othercollege{
-			text-align:center;
-		}
-
 		.smallcenter{
 			text-align:center;
 		}

@@ -99,11 +99,11 @@
 					<li><a href="study.html">澳洲留学</a></li>
 					<li><a href="transfer.html">升学转学</a></li>
 					<li><a href="visa.html">签证服务</a></li>
-					<li><a href="estate.html">澳洲购房</a></li>
+					<li><a href="./about.html">澳洲购房</a></li>
 					<li class="dropdown active">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">移民服务<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="immigration.html">商业移民</a></li>
+							<li><a href="immigration.html#commercial">商业移民</a></li>
 							<li><a href="immigration.html#tek">独立技术移民</a></li>
 							<li><a href="immigration.html#relative">配偶&亲属移民</a></li>
 						</ul>

@@ -37,7 +37,7 @@
 		nav{opacity:0.8;}
 		-->
 		#aboutjumbotron{
-			background-image:url(../assets/pics/service/study/study.jpg);
+			background-image:url(../assets/pics/service/study/study.png);
 			background-repeat:no-repeat;
 			height:500px;
 			background-size:cover;

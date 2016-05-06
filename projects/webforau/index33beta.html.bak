@@ -433,13 +433,19 @@
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox" >
 							<div class="item active">
-								<img src="./assets/pics/news/news001.png" alt="pics">
+								<a href="./blogs/blog-160506-02.html">
+								<img src="./assets/pics/blog/year2016/picnews/blog160506-02.jpg" title="澳洲高中关注度持续上升——Goldenage悉尼地区高中推荐">
+								</a>
 							</div>
 							<div class="item">
-								<img src="./assets/pics/news/news001.png" alt="pics">
+								<a href="./blogs/blog-160505-01.html">
+								<img src="./assets/pics/blog/year2016/picnews/blog160505-01.jpg" title="Goldenage：谁说只有高考一条路？澳洲本科轻松申请">
+								</a>
 							</div>
 							<div class="item">
-								<img src="./assets/pics/news/news001.png" alt="pics">
+								<a href="./blogs/bloglist-1605.html">
+								<img src="./assets/pics/blog/year2016/picnews/blog160504-01.jpg" title="来澳洲，你不能错过的七种美食">
+								</a>
 							</div>
 						</div>
 						
@@ -461,13 +467,15 @@
 				<!-- news -->
 				<div class="col-xs-12 col-sm-5 col-md-4" id="newstitles">
 					<p>
-						<h3>新闻<small>--news</small></h3>
+						<h3>近期新闻<small>--news</small></h3>
 						<br/>
 					</p>	
-					<p><a href="./blogs/blog.html" target="_blank">2016.04.05：ddsadasdd</a></p>
-					<p><a href="./blogs/blog.html" target="_blank">2016.03.25：dfddsfdd</a></p>
-					<p><a href="./blogs/blog.html" target="_blank">2016.01.01：鑫澳祝所有客户新年快乐，猴年大吉</a></p>
-					<p><a href="./blogs/blog.html" target="_blank">更多……</a></p>
+					<p><a href="./blogs/blog-160506-02.html" target="_blank">澳洲高中关注度持续上升——Goldenage悉尼地区高中推荐</a></p>
+					<p><a href="./blogs/blog-160506-01.html" target="_blank">生活小助手：最全澳大利亚生活必备网址大全</a></p>
+					<p><a href="./blogs/blog-160505-01.html" target="_blank">Goldenage：谁说只有高考一条路？澳洲本科轻松申请</a></p>
+					<p><a href="./blogs/blog-160504-01.html" target="_blank">来澳洲，你不能错过的七种美食</a></p>
+					<p><a href="./blogs/blog-160503-01.html" target="_blank">如何申请澳洲留学贷款</a></p>
+					<p><a href="./blogs/bloglist-1605.html" target="_blank">更多……</a></p>
 				</div>
 			
 			</div><!-- /.row -->

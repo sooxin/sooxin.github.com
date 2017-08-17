@@ -1,0 +1,366 @@
+body {
+	background-color: #f5f7f9;
+	min-width: 15rem;
+}
+
+/* header */
+.header {
+	height: 3rem;
+	border-bottom: solid 1px #f2f2f2;
+	background-color: white;
+}
+
+.header .menu {
+	float: left;
+}
+
+.header .menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: bold;
+}
+
+.header .menu ul li {
+	display: inline-block;
+}
+
+.header .menu ul li a {
+	display: inline-block;
+	text-decoration: none;
+	color: #000000;
+	padding: 0 0.2rem;
+	padding-top: 1rem;
+	height: 2rem;
+}
+
+.backToHome a {
+	margin-left: 0.3rem;
+	margin-right: 0.4rem;
+}
+
+.header .menu ul li a:hover {
+	background-color: #f2f2f2;
+	padding-bottom: 0.rem;
+	border-bottom: solid 1px #000000;
+}
+
+.header .portrait {
+	float: right;
+}
+
+.header .portrait img {
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 1.8rem;
+	margin-top: 0.6rem;
+	margin-right: 1rem;
+}
+
+/* sideBar */
+.sideBar {
+	display: none;
+}
+
+/* container */
+.container {
+	/*width: 100%;*/
+	color: #2F2F2F;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.article-section {
+	height: auto;
+	padding: 0.9rem;
+	background-color: #FFFFFF;
+}
+
+.article-section .article-title {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bolder;
+	margin-top: 0.5rem;
+}
+
+.article-section .article-info {
+	text-align: center;
+	display: block;
+	color: #b1b1b1;
+	font-size: 0.7rem;
+	margin: 0.5rem 0;
+}
+
+/* pagination */
+.pagination {
+	border-top: solid black 1px;
+	margin-top: 80px;
+	padding-top: 20px;
+}
+
+.pagination ul {
+	text-align: center;
+	padding: 0px;
+}
+
+.pagination ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0px 5px;
+}
+
+.pagination ul li a {
+	text-decoration: none;
+	color: #000000;
+	display: block;
+	background-color: #00FFFF;
+	padding: 3px 10px;
+}
+
+.pagination ul li a:hover {
+	color: white;
+	background-color: #000000;
+}
+
+
+/* footer*/
+.footer {
+	margin: 4rem auto 1.5rem;
+	width: 100%;
+	text-align: center;
+}
+.footer ul {
+	padding: 0;
+}
+.footer ul a {
+	text-decoration: none;
+	color: #000000;
+}
+.footer ul li {
+	list-style: none;
+	margin: 0.5rem;
+}
+.contact-me li {
+	display: inline-block;
+}
+.contact-me li a {
+	display: block;
+	/*width: 3rem;*/
+	padding:0.1rem 0.3rem;
+	border-radius: 2rem;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+}
+.contact-me li a:hover {
+	border-radius: 2rem;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.poweredby a {
+	border-bottom: dashed black 1px;
+	display: inline-block;
+	margin: 0 0.4rem;
+	padding: 0 0.1rem;
+	font-weight: bolder;
+}
+.poweredby a:hover {
+	border-radius: 0.5rem;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+/* markdown text style */
+.article-content{
+	line-height: 1.375rem;
+	word-break: break-word;
+	margin-top: 3rem;
+}
+/* paragraph */
+.article-content p {
+	font-size: 0.8rem;
+}
+
+/* hr */
+/* h1~h6 */
+.article-content h1 {
+	border-left: solid black 0.7rem;
+	text-indent: 0.2rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.article-content h2 {
+	border-left: solid black 0.6rem;
+	text-indent: 0.2rem;
+	font-size: 1.1rem;
+}
+.article-content h3 {
+	border-left: solid black 0.5rem;
+	text-indent: 0.2rem;
+	font-size: 1rem;
+}
+.article-content h4 {
+	border-left: solid black 0.4rem;
+	text-indent: 0.2rem;
+	font-size: 0.9rem;
+}
+.article-content h5 {
+	border-left: solid black 0.3rem;
+	text-indent: 0.2rem;
+	font-size: 0.8rem;
+}
+.article-content h6 {
+	border-left: solid black 0.2rem;
+	text-indent: 0.2rem;
+	font-size: 0.8rem;
+}
+
+/* blockquote */
+.article-content blockquote {
+	font-style: italic;
+	background-color: #f5f7f9;
+	padding: 0.2rem 0.5rem;
+	margin: 0.5rem;
+	border-left: solid black 0.1rem;
+}
+
+/* list */
+.article-content ul {
+	padding-left: 0.75rem;
+}
+
+/* link style */
+.article-content a {
+	text-decoration: none;
+	padding: 0 0.2rem;
+	/*display: inline-block;*/
+	color: #000000;
+	border-bottom: dashed black 0.05rem;
+}
+.article-content a:hover {
+	color: #FFFFFF;
+	border-radius: 0.5rem;
+	background-color: #000000;
+}
+
+/* image style */
+.article-content p img {
+	display: block;
+	max-width: 100%;
+	min-width: 61.8%;
+	margin: 0.5rem auto;
+}
+
+/* table style */
+.article-content table {
+	border-spacing: 1rem;
+	font-size: 0.6rem;
+	width: 100%;
+	background-color: #f5f7f9;
+	/*table-layout: auto;*/
+	word-wrap: normal;
+	word-break: break-word;
+}
+.article-content table thead th {
+	border-bottom: solid black 0.1rem;
+	border-top: solid black 0.1rem;
+}
+.article-content table tbody td {
+	border-bottom: solid black 0.05rem;
+}
+/* strong and emphasize */
+.article-content strong,.article-content em{
+	font-weight: bold;
+}
+
+/* codeblock */
+.article-content code{
+	background-color: rgb(245,242,240);
+	/*font-size: 0.7rem;*/
+	padding: 0.1rem;
+}
+.article-content pre{
+	font-size: 0.7rem;
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+	body {
+		margin: 0 auto;
+		padding: 0.5rem;
+	}
+	
+	.header,
+	.sideBar,
+	.container,
+	.footer {
+		max-width: 972px;
+		margin: 0 auto;
+	}
+	
+	.header {
+		display: none;
+	}
+	
+	.container .article-section {
+		margin: 0.5rem 13rem 0 0;
+		/*max-width: 23.5rem;*/
+	}
+	/* sideBar */
+	.sideBar {
+		display: block;
+		position: relative;
+	}
+	
+	.sideBar-wrapper {
+		padding: 1rem 0;
+		background-color: #FFFFFF;
+		width: 12.5rem;
+		position: absolute;
+		/*left: 26rem;*/
+		top: 0.5rem;
+		right: 0;
+		float: right;
+	}
+	/* author and portrait */
+	.sideBar-wrapper .sideBar-portrait {
+		text-align: center;
+	}
+	.sideBar-wrapper .sideBar-portrait img {
+		width: 10rem;
+		height: 10rem;
+		border-radius: 10rem;
+		margin: 0.5rem 0;
+	}
+	.sideBar-wrapper .sideBar-portrait .sideBar-author {
+		font-size: larger;
+		font-weight: bolder;
+	}
+	/* navigator*/
+	.sideBar-wrapper nav ul {
+		padding: 0;
+	}
+	.sideBar-wrapper nav ul li {
+		text-align: center;
+		font-size: large;
+		list-style: none;
+	}
+	.sideBar-wrapper nav ul li a {
+		text-decoration: none;
+		color: #000000;
+		display: inline-block;
+		padding: 0.25rem 0.5rem;
+	}
+	.sideBar-wrapper nav ul li a:hover {
+		color: #FFFFFF;
+		background-color: #000000;
+	}
+}
+
+/*中等屏幕（桌面显示器，大于等于 992px）*/ 
+/*@media (min-width: 992px) {}*/
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+/*@media (min-width:1200px) {}*/

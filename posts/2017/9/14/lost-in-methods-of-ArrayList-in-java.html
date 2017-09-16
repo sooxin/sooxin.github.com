@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="icon" href="https://sooxin.github.io/assets/img/favicon.png"/>
+		<title>Java 中的 ArrayList 踩坑记-Sooxin</title>
+		<link rel="stylesheet" href="https://sooxin.github.io/assets/css/base.css" />
+		<link rel="stylesheet" href="https://sooxin.github.io/assets/css/article.css" />
+		<link rel="stylesheet" href="https://sooxin.github.io/assets/css/prism.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<nav class="menu">
+				<ul>
+					<li class="backToHome">
+						<a href="https://sooxin.github.io/index.html">返回首页</a>
+					</li>
+					<li>
+						<a href="https://sooxin.github.io/tags.html">标签</a>
+					</li>
+					<li>
+						<a href="https://sooxin.github.io/works.html">作品</a>
+					</li>
+					<li>
+						<a href="https://sooxin.github.io/about.html">关于</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="portrait">
+				<a href="https://sooxin.github.io/index.html"><img src="https://sooxin.github.io/assets/img/portrait.jpg" /></a>
+			</div>
+			<!-- .header -->
+		</div>
+		<!-- .header -->
+		<div class="sideBar">
+				<div class="sideBar-wrapper">
+				<div class="sideBar-portrait">
+					<img src="https://sooxin.github.io/assets/img/portrait.jpg" />
+					<div class="sideBar-author">Sooxin</div>
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a href="https://sooxin.github.io/index.html">首页</a>
+						</li>
+						<li>
+							<a href="https://sooxin.github.io/archives.html">归档</a>
+						</li>
+						<li>
+							<a href="https://sooxin.github.io/tags.html">标签</a>
+						</li>
+						<li>
+							<a href="https://sooxin.github.io/works.html">作品</a>
+						</li>
+						<li>
+							<a href="https://sooxin.github.io/about.html">关于</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div><!-- .sidebar -->
+		<div class="container">
+			<div class="article-section">
+				<article>
+					<div class="article-title">Java 中的 ArrayList 踩坑记</div>
+					<small class="article-info">发布于2017-09-14，最近更新于2017-09-16</small>
+					<article class="article-content">
+						<p>最近在看 JDK8 中<code>java.util.ArrayList</code>的源码，发现其中一些方法的精妙，也启发了我写代码的一些方式。</p>
+<p>除此以外，阅读中我注意到<code>ArrayList</code>里一些方法的内部实现，不加注意的话，在使用该方法过程中容易造成一些不必要的麻烦。</p>
+<p>本文只提两个方法。</p>
+<h1 id="indexofobject-o">indexOf(Object o)</h1>
+<p><code>indexOf(Object o)</code>方法用来返回某个元素在<code>ArrayList</code>实例中的索引，若这个元素不存在，则返回 -1 。需要注意的是这个方法内部比较非<code>null</code>元素时，使用的是<code>equals(Object obj)</code>方法。这本不是什么大问题，但是对有些重写了<code>equals(Object obj)</code>方法的类来说，就需要注意了。</p>
+<p>举个例子，运行下面这串代码：</p>
+<pre><code class="language-java">ArrayList&lt;Integer&gt; arr = new ArrayList&lt;Integer&gt;();
+Integer a = new Integer(200);
+Integer b = new Integer(200);
+// 添加 a、b 到 arr 中
+arr.add(a);
+arr.add(b);
+// 打印 arr
+System.out.println(&quot;arr&quot; + arr.toString());
+// 移除 arr 中的元素 a
+arr.remove(a);
+// 打印移除 a 后的 arr
+System.out.println(&quot;arr&quot; + arr.toString());
+// 打印 a 的索引
+System.out.println(&quot;a 的索引：&quot; + arr.indexOf(a));
+// 打印 arr 中是否存在 a
+System.out.println(&quot;a 是否存在：&quot; + arr.contains(a));
+</code></pre>
+<p>输出结果如下：</p>
+<pre><code class="language-html">arr[200, 200]
+arr[200]
+a 的索引：0
+a 是否存在：true
+</code></pre>
+<p>结果变得奇怪了，我们虽然一开始在<code>arr</code>中添加了<code>a</code>和<code>b</code>，并在后续操作中移除了<code>a</code>，但是查询<code>a</code>的索引和<code>a</code>的存在时，却出现了意想不到的结果。</p>
+<p>其实看看<code>indexOf(Object o)</code>方法的源码就知道了，源码如下：</p>
+<pre><code class="language-java">/**
+ * Returns the index of the first occurrence of the specified element
+ * in this list, or -1 if this list does not contain the element.
+ * More formally, returns the lowest index &lt;tt&gt;i&lt;/tt&gt; such that
+ * &lt;tt&gt;(o==null&amp;nbsp;?&amp;nbsp;get(i)==null&amp;nbsp;:&amp;nbsp;o.equals(get(i)))&lt;/tt&gt;,
+ * or -1 if there is no such index.
+ */
+public int indexOf(Object o) {
+  if (o == null) {
+    for (int i = 0; i &lt; size; i++)
+      if (elementData[i]==null)  return i;
+  } else { // o 不为 null时
+    for (int i = 0; i &lt; size; i++)
+      // 使用 equals() 方法判断元素是否相等
+      if (o.equals(elementData[i]))  return i;
+  }
+  // 未查找到指定元素，则返回 -1
+  return -1;
+}
+</code></pre>
+<p>可以看到，在传入参数不为<code>null</code>的时候，使用了<code>equals(Object obj)</code>方法来判断参数是否与集合中的元素相等。我们知道在没有重写的情况下，<code>equals(Object obj)</code>方法内部其实就是使用<code>==</code>作比较，相当于比较两者的内存地址是否相等。而不巧的是<code>Integer</code>等一些特殊的类（如<code>String</code>），都有重写<code>equals(Object obj)</code>方法，因此变成了比较值，而非比较内存地址。这样就很清楚了，虽然用<code>remove(a)</code>删去了<code>a</code>，但是在<code>indexOf(a)</code>中，比较<code>a</code>与留在<code>arr</code>中的元素用的是<code>equals(Object obj)</code>方法，<code>a</code>和<code>b</code>的值当然想等咯（都等于 200 ），于是就出现了上述的怪状。</p>
+<p>至于<code>contains(Object o)</code>方法，其内部判断元素是否存在时，就是利用<code>indexOf(Object o)</code>方法查询某个元素的索引，若返回值为大于或等于零（即不为 -1 ）,则表示该元素存在，返回<code>true</code>。所以也出现这样的情况。其实<code>remove(Object o)</code>方法也在其内部用了<code>equals(Object obj)</code>方法作比较，这里暂且不表。</p>
+<p>如果不了解这种重写了<code>equals(Object obj)</code>方法的类和一些使用<code>equals(Object obj)</code>方法作比较的类，就会很容易出现误解，因此还需要多多阅读源码呀！</p>
+<blockquote>
+<p>比如不了解<code>StringBuffer</code>和<code>StringBuilder</code>的话，很容易理所当然的想既然<code>String</code>重写了<code>equals(Object obj)</code>，从而可以直接进行值比较，就认为<code>StringBuffer</code>和<code>StringBuilder</code>也应当如此，但是却并非这样。<code>StringBuffer</code>和<code>StringBuilder</code>都没有重写<code>equals(Object obj)</code>方法，因此调用方法还是进行的内存地址的比较（相当于使用<code>==</code>）。</p>
+</blockquote>
+<h1 id="removeint-index">remove(int index)</h1>
+<p>众所周知，<code>remove(int index)</code>用来删除集合中指定索引处的元素，似乎不会出现什么问题，那么先来看一个例子：</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; arr = new ArrayList&lt;String&gt;();
+// 此处直接定义一个索引,通常应该由某个业务方法返回
+Integer index = 0;
+// 随意添加两个元素
+arr.add(&quot;hello&quot;);
+arr.add(&quot;world&quot;);
+System.out.println(&quot;arr&quot; + arr.toString());
+// 删除 index 索引处的 &quot;hello&quot;
+arr.remove(index);
+// 再次打印 arr 集合
+System.out.println(&quot;arr&quot; + arr.toString());
+</code></pre>
+<p>输出结果如下：</p>
+<pre><code class="language-html">arr[hello, world]
+arr[hello, world]
+</code></pre>
+<p>相信有很多人已经看出原因所在了，如果没有看出请继续往下阅读。</p>
+<p>这里我们先创建了一个集合对象<code>arr</code>，并分别放入两个字符串，接着我们想要删除索引<code>index</code>处的元素，即“hello”字符串，但是调用<code>remove()</code>后并未出现想要的结果，元素并未被删除。</p>
+<p>那么肯定是哪里出了问题。我们看一下<code>remove()</code>方法的源码，可以发现其实有两个<code>remove()</code>方法。</p>
+<pre><code class="language-java">// 第一个 remove() 方法
+public E remove(int index) {
+  rangeCheck(index);
+
+  modCount++;
+  E oldValue = elementData(index);
+
+  int numMoved = size - index - 1;
+  if (numMoved &gt; 0)
+    System.arraycopy(elementData, index+1, elementData, index,numMoved);
+        
+  elementData[--size] = null; // clear to let GC do its work
+  return oldValue;
+}
+
+// 第二个 remove 方法
+public boolean remove(Object o) {
+  if (o == null) {
+    for (int index = 0; index &lt; size; index++)
+      if (elementData[index] == null) {
+        fastRemove(index);
+        return true;
+      }
+  } else {
+    for (int index = 0; index &lt; size; index++)
+      if (o.equals(elementData[index])) {
+        fastRemove(index);
+        return true;
+      }
+  }
+  return false;
+}
+</code></pre>
+<p>还出现了个<code>remove(Object o)</code>重载的方法，这个方法我们也不陌生。显然原来的代码中<code>arr.remove(index)</code>没有调用第一个<code>remove(int index)</code>。再仔细看看代码，<code>index</code>实际上是<code>Integer</code>类的对象，因此我们的代码最终调用的是第二个<code>remove(Object o)</code>。于是我们原意想删除索引 0 处的元素变成了删除元素中与<code>index</code>对应（equals）的元素。</p>
+<p>其实这两个方法因传入的参数类型不同，乍看之下很容易区分。但是这里的坑在于有时使用者没有注意到自己的索引是一个包装类<code>Integer</code>对象，从而导致了想要调用的方法和实际调用方法不符。</p>
+<p><strong>后记：</strong></p>
+<p>仔细想一想，其实所谓的“坑”都是自己了解的过少导致的，如果不深入学习，迟早会遇到更多的坑，这些“后果”都是有“前因”的。阅读源码能学到很多东西，不只是上面提到的方法细节，还有一些高效率的方法以及代码风格，都值得去慢慢咀嚼。加油努力吧！</p>
+<blockquote>
+<p>本文由 <a href="https://sooxin.github.io">Sooxin</a> 创建于 2017-09-14 。本文链接：</p>
+<ul>
+<li>Github 博客：<a href="https://sooxin.github.io/posts/2017/9/14/lost-in-methods-of-ArrayList-in-java.html">https://sooxin.github.io/posts/2017/9/14/lost-in-methods-of-ArrayList-in-java.html</a></li>
+<li>简书：<a href="http://www.jianshu.com/p/394d370cd6fe">http://www.jianshu.com/p/394d370cd6fe</a></li>
+</ul>
+<p>转载请保留本署名。</p>
+</blockquote>
+
+					</article><!-- .articleContent -->
+				</article>
+				<div class="pagination">
+					<ul>
+						<li>
+							<a href="https://sooxin.github.io/index.html">转到首页</a>
+						</li>
+						<li>
+							<a href="#">返回顶部</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul>
+				<li>
+					<ul class="contact-me">
+						<li>
+							<a href="https://sooxin.github.io/about.html#联系我" target="_blank">Email</a>
+						</li>
+						<li>
+							<a href="https://github.com/sooxin" target="_blank">GitHub</a>
+						</li>
+						<li>
+							<a href="http://weibo.com/u/1774404680" target="_blank">微博</a>
+						</li>
+						<li>
+							<a href="http://www.jianshu.com/u/cc093b32e301" target="_blank">简书</a>
+						</li>
+					</ul>
+					<li class="poweredby">Powered by
+						<a href="#">soobo</a>
+					</li>
+					<li>Theme by <strong>BlackLovesWhite</strong></li>
+					<li>&copy;2017 Sooxin All Rights Reserved</li>
+					
+				</li>
+			</ul>
+		</div><!-- .footer -->
+		<script type="text/javascript" src="https://sooxin.github.io/assets/js/prism.js"></script>
+	</body>
+</html>
